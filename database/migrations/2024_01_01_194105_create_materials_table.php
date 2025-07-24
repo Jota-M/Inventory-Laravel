@@ -28,14 +28,8 @@ return new class extends Migration
             $table->string('description')->nullable();
             $table->boolean('active')->default(true);
             $table->integer('stock')->default(1);
-            $table->integer('stock_total')->nullable();
-            $table->integer('costo')->nullable();
             $table->date('fecha_ing')->nullable();
-            $table->date('fecha_sal')->nullable();
-            $table->string('unidad')->nullable();
             $table->string('reponsable')->nullable();
-            $table->string('entregado_a')->nullable();
-            $table->string('Nro_factura')->nullable();
             $table->timestamps();
         });
     }

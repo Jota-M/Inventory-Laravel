@@ -41,7 +41,11 @@ $configData = Helper::appClasses();
             <?php endif; ?>
           </td>
           <td><?php echo e($suplier->created_at); ?></td>
-          <td><a href="<?php echo e(route('pages-supliers-show', $suplier->id)); ?>">Editar</a> | <a href="<?php echo e(route('pages-supliers-destroy', $suplier->id)); ?>">Borrar</a></td>
+          <td><a href="<?php echo e(route('pages-supliers-show', $suplier->id)); ?>">
+            <span class="badge bg-success">Editar</span>
+          </a> | <a href="<?php echo e(route('pages-supliers-destroy', $suplier->id)); ?>">
+            <span class="badge bg-danger">Borrar</span>
+          </a></td>
         </tr>  
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </tbody>

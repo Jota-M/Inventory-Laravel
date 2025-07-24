@@ -53,8 +53,12 @@ $configData = Helper::appClasses();
           </td>
           <td>{{$user->created_at}}</td>
           <td>
-            <a href="{{route('pages-users-show', $user->id)}}">Editar</a> | 
-            <a href="{{route('pages-users-destroy', $user->id)}}">Borrar</a>
+            <a href="{{route('pages-users-show', $user->id)}}">
+              <span class="badge bg-success">Editar</span>
+            </a> | 
+            <a href="{{route('pages-users-destroy', $user->id)}}">
+              <span class="badge bg-danger">Eliminar</span>
+            </a>
           </td>
         </tr>
       @endforeach

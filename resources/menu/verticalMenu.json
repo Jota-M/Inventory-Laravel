@@ -19,6 +19,12 @@
         "slug": "pages-materials"
       },
       {
+        "url": "/material-outputs",
+        "name": "Salidas de Materiales",
+        "icon": "menu-icon tf-icons bx bxs-truck",
+        "slug": "pages-material-outputs"
+      },
+      {
         "url": "/supliers",
         "name": "Proveedores",
         "icon": "menu-icon tf-icons bx bxs-group",

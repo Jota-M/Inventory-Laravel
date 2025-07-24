@@ -18,11 +18,11 @@ $configData = Helper::appClasses();
         <tr>
           <th>ID</th>
           <th>Nombre</th>
+          <th>Responsable</th>
           <th>Tipo</th>
-          <th>Producto</th>
+          <th>Estado</th>
           <th>Creado en</th>
           <th>Actions</th>
-          <th>Realizar Venta</th>
           <th>Imagen</th>
         </tr>
       </thead>
@@ -31,6 +31,7 @@ $configData = Helper::appClasses();
         <tr>
           <td>{{$material->id}}</td>
           <td>{{$material->name}}</td>
+          <td>{{$material->reponsable}}</td>
           <td >
           @if($material->type && $material->type->icon)
                 <span class="badge bg-primary"><i class="{{$material->type->icon}}"></i></span>
@@ -59,11 +60,6 @@ $configData = Helper::appClasses();
           <span class="badge bg-danger">Eliminar</span>
           </a>
           </td>
-          <td>
-        <a href="{{route('pages-materials-showw', $material->id)}}">
-          <span class="badge bg-primary">Registrar Salida </span>
-        </a>
-        </td>
           <td>
             @if($material->image_url)
   <img src="{{ asset($material->image_url) }}" alt="Imagen del material" style="max-width:100px; height:auto;">

@@ -73,7 +73,6 @@ Route::get('/materials/destroy/{device_id}', $controller_path. '\pages\Materials
 Route::get('/materials/switch/{device_id}', $controller_path. '\pages\Materials@switch')->name('pages-materials-switch');
 Route::get('/materials/list', $controller_path. '\pages\Materials@list')->name('pages-materials-list');
 Route::get('/materials/showw/{device_id}', $controller_path. '\pages\Materials@showw')->name('pages-materials-showw');
-Route::post('/materials/salida', $controller_path. '\pages\Materials@salidaM')->name('pages-materials-salida');
 
 //backups
 Route::get('/backups', $controller_path. '\pages\Backups@index')->name('pages-backups');
@@ -98,3 +97,9 @@ Route::get('/reports-M', $controller_path. '\pages\ReportsM@index')->name('pages
 Route::get('/reports-M/create', $controller_path. '\pages\ReportsM@create')->name('pages-reports-M-create');
 Route::get('/reports-M/delete/{id}', $controller_path. '\pages\ReportsM@delete')->name('pages-reports-M-destroy');
 Route::get('/reports-M/download/{fileName}', $controller_path . '\pages\ReportsM@download')->name('pages-reports-M-download');
+
+// material outputs
+Route::get('/material-outputs', $controller_path . '\pages\MaterialsOut@index')->name('pages-material-outputs');
+Route::get('/material-outputs/create', $controller_path . '\pages\MaterialsOut@create')->name('pages-material-outputs-create');
+Route::post('/material-outputs/store', $controller_path . '\pages\MaterialsOut@store')->name('pages-material-outputs-store');
+Route::get('/material-outputs/list', $controller_path . '\pages\MaterialsOut@list')->name('pages-material-outputs-list');

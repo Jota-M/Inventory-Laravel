@@ -41,7 +41,11 @@ $configData = Helper::appClasses();
             @endif
           </td>
           <td>{{$suplier->created_at}}</td>
-          <td><a href="{{route('pages-supliers-show', $suplier->id)}}">Editar</a> | <a href="{{route('pages-supliers-destroy', $suplier->id)}}">Borrar</a></td>
+          <td><a href="{{route('pages-supliers-show', $suplier->id)}}">
+            <span class="badge bg-success">Editar</span>
+          </a> | <a href="{{route('pages-supliers-destroy', $suplier->id)}}">
+            <span class="badge bg-danger">Borrar</span>
+          </a></td>
         </tr>  
     @endforeach
       </tbody>

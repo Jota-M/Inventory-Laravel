@@ -18,11 +18,11 @@ $configData = Helper::appClasses();
         <tr>
           <th>ID</th>
           <th>Nombre</th>
+          <th>Responsable</th>
           <th>Tipo</th>
-          <th>Producto</th>
+          <th>Estado</th>
           <th>Creado en</th>
           <th>Actions</th>
-          <th>Realizar Venta</th>
           <th>Imagen</th>
         </tr>
       </thead>
@@ -31,6 +31,7 @@ $configData = Helper::appClasses();
         <tr>
           <td><?php echo e($material->id); ?></td>
           <td><?php echo e($material->name); ?></td>
+          <td><?php echo e($material->reponsable); ?></td>
           <td >
           <?php if($material->type && $material->type->icon): ?>
                 <span class="badge bg-primary"><i class="<?php echo e($material->type->icon); ?>"></i></span>
@@ -59,11 +60,6 @@ $configData = Helper::appClasses();
           <span class="badge bg-danger">Eliminar</span>
           </a>
           </td>
-          <td>
-        <a href="<?php echo e(route('pages-materials-showw', $material->id)); ?>">
-          <span class="badge bg-primary">Registrar Salida </span>
-        </a>
-        </td>
           <td>
             <?php if($material->image_url): ?>
   <img src="<?php echo e(asset($material->image_url)); ?>" alt="Imagen del material" style="max-width:100px; height:auto;">
