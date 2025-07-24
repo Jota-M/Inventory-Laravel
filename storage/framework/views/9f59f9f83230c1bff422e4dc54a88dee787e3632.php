@@ -4,7 +4,7 @@ $configData = Helper::appClasses();
 
 
 
-<?php $__env->startSection('title', 'Devices'); ?>
+<?php $__env->startSection('title', 'Materiales'); ?>
 
 <?php $__env->startSection('content'); ?>
 

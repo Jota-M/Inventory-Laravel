@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Type extends Model
 {
     use HasFactory;
+public function materials()
+{
+    return $this->hasMany(Material::class, 'type_id');
+}
+
 }

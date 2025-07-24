@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class ReportType extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['url'];
+    // Modelo Type.php
 }
+
